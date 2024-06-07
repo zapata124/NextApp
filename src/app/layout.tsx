@@ -11,7 +11,12 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div style={{ width: '100vw', height: '100vh', background: 'gray' }}>
+          <div style={{ width: '100%', height: '30px', background: 'red' }}>Header</div>
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
